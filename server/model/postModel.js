@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-const formSchema = new Schema(
+const postSchema = new Schema(
   {
     name: {
       type: String,
@@ -22,4 +22,5 @@ const formSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Post", postSchema);
+const Post = mongoose.model("Post", postSchema);
+export default Post;
